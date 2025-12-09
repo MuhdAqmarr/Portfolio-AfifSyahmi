@@ -10,7 +10,13 @@ export default function About() {
                         About Me
                     </h1>
                     <p className="text-xl text-slate-600 leading-relaxed">
-                        I am a graduate in Applied Biology with Islamic Studies (Biology) from Universiti Malaya, aiming to bridge the gap between scientific innovation and ethical principles.
+                        I am a graduate in Applied Biology with Islamic Studies (Biology) from
+                        <img
+                            src="/UM-Logo.png"
+                            alt="UM Logo"
+                            className="h-6 w-auto inline-block mx-2 align-middle"
+                        />
+                        <b>Universiti of Malaya</b>, aiming to bridge the gap between scientific innovation and ethical principles.
                     </p>
                 </div>
 

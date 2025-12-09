@@ -1,12 +1,17 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-export default function GradientButton({ to, href, children, className = "", type, disabled, ...props }) {
-    const baseClasses = `relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-0 rounded-full shadow-xl group ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`;
-    const bgClasses = "absolute inset-0 w-full h-full bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-blue bg-[length:200%_auto] animate-gradient";
+const MotionLink = motion.create(Link);
 
-    // Custom animation for the gradient background
-    // Ideally handled via tailwind class but style prop is easier for specific bg pos
+export default function GradientButton({ to, href, children, className = "", type, disabled, ...props }) {
+    const baseClasses = `relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-white transition-all duration-300 ease-out border-0 rounded-full shadow-xl group ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`;
+
+    // Animation props
+    const animationProps = {
+        whileHover: { scale: 1.05 },
+        whileTap: { scale: 0.95 },
+        transition: { type: "spring", stiffness: 400, damping: 10 }
+    };
 
     const content = (
         <>
@@ -17,24 +22,23 @@ export default function GradientButton({ to, href, children, className = "", typ
 
     if (to) {
         return (
-            <Link to={to} className={`${baseClasses} ${className}`} {...props}>
+            <MotionLink to={to} className={`${baseClasses} ${className}`} {...animationProps} {...props}>
                 {content}
-            </Link>
+            </MotionLink>
         );
     }
 
-    // If type is specified (e.g., "submit" or "button"), render a button element
     if (type) {
         return (
-            <button type={type} disabled={disabled} className={`${baseClasses} ${className}`} {...props}>
+            <motion.button type={type} disabled={disabled} className={`${baseClasses} ${className}`} {...animationProps} {...props}>
                 {content}
-            </button>
+            </motion.button>
         );
     }
 
     return (
-        <a href={href} className={`${baseClasses} ${className}`} {...props}>
+        <motion.a href={href} className={`${baseClasses} ${className}`} {...animationProps} {...props}>
             {content}
-        </a>
+        </motion.a>
     );
 }

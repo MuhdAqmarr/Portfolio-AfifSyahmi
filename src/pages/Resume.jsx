@@ -26,7 +26,7 @@ export default function Resume() {
                         <span className="p-2 bg-blue-50 rounded-lg text-brand-blue">🎓</span> Education
                     </h2>
                     <div className="bg-grey/10 backdrop-blur-sm rounded-2xl p-8 border border-grey/50 shadow-md">
-                        <div className="pl-4 border-l border-slate-200 ml-3">
+                        <div className="border-slate-200 ml-3">
                             <TimelineItem
                                 year="2021 - 2025"
                                 title="Bachelor of Islamic Studies and Applied Science (Biology)"
@@ -56,7 +56,7 @@ export default function Resume() {
                         <span className="p-2 bg-cyan-50 rounded-lg text-brand-cyan">💼</span> Experience
                     </h2>
                     <div className="bg-grey/10 backdrop-blur-sm rounded-2xl p-8 border border-grey/50 shadow-md">
-                        <div className="pl-4 border-l border-slate-200 ml-3">
+                        <div className="border-slate-200 ml-3">
                             <TimelineItem
                                 year="July 2025 - Oct 2025"
                                 title="Intern"
@@ -104,7 +104,7 @@ export default function Resume() {
                         <span className="p-2 bg-emerald-50 rounded-lg text-emerald-500">📜</span> Certifications
                     </h2>
                     <div className="bg-grey/10 backdrop-blur-sm rounded-2xl p-8 border border-grey/50 shadow-md">
-                        <div className="pl-4 border-l border-slate-200 ml-3">
+                        <div className="border-slate-200 ml-3">
                             <TimelineItem
                                 year="2025"
                                 title="Halal Food Forensics (HAFFOT)"
