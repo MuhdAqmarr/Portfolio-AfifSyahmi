@@ -4,6 +4,7 @@ import PageWrapper from '../components/PageWrapper';
 import ProjectCard from '../components/ProjectCard';
 import SectionHeading from '../components/SectionHeading';
 import KeyStat from '../components/KeyStat';
+import SEO from '../components/SEO';
 import { ArrowRight, FlaskConical, Award, BookOpen, GraduationCap, Send, Dna } from 'lucide-react';
 
 const featuredProjects = [
@@ -26,6 +27,11 @@ const featuredProjects = [
 export default function Home() {
     return (
         <PageWrapper>
+            <SEO
+                title="Home"
+                description="Portfolio of Afif Syahmi - First Class Honours graduate in Applied Biology with expertise in Halal Science, Molecular Biology, and Research Innovation. Available for hire."
+                url="/"
+            />
             {/* --- HERO SECTION --- */}
             <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 py-20">
 

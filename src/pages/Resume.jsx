@@ -2,10 +2,16 @@ import PageWrapper from '../components/PageWrapper';
 import TimelineItem from '../components/TimelineItem';
 import { Download } from 'lucide-react';
 import GradientButton from '../components/GradientButton';
+import SEO from '../components/SEO';
 
 export default function Resume() {
     return (
         <PageWrapper className="pb-20">
+            <SEO
+                title="Resume"
+                description="View Afif Syahmi's professional resume - Education at Universiti Malaya, experience at IFFAH USIM, certifications in Halal Executive and HAFFOT, and technical laboratory skills."
+                url="/resume"
+            />
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="flex flex-col md:flex-row justify-between items-center mb-16">

@@ -1,9 +1,15 @@
 import PageWrapper from '../components/PageWrapper';
 import FloatingCard from '../components/FloatingCard';
+import SEO from '../components/SEO';
 
 export default function About() {
     return (
         <PageWrapper className="pb-20">
+            <SEO
+                title="About"
+                description="Learn about Afif Syahmi - Applied Biology graduate from Universiti Malaya with First Class Honours. Passionate about bridging scientific innovation with ethical principles in Halal Science."
+                url="/about"
+            />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h1 className="text-4xl font-bold bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent mb-6">

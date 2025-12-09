@@ -1,5 +1,6 @@
 import PageWrapper from '../components/PageWrapper';
 import GradientButton from '../components/GradientButton';
+import SEO from '../components/SEO';
 import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState, useRef } from 'react';
@@ -122,6 +123,11 @@ export default function Contact() {
 
     return (
         <PageWrapper className="pb-20">
+            <SEO
+                title="Contact"
+                description="Get in touch with Afif Syahmi for opportunities in Halal Science, Research, and Laboratory operations. Available for hire in Malaysia."
+                url="/contact"
+            />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl font-bold bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent mb-6">

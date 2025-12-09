@@ -1,5 +1,6 @@
 import PageWrapper from '../components/PageWrapper';
 import ProjectCard from '../components/ProjectCard';
+import SEO from '../components/SEO';
 
 const projects = [
     {
@@ -35,6 +36,11 @@ const projects = [
 export default function Projects() {
     return (
         <PageWrapper className="pb-20">
+            <SEO
+                title="Projects"
+                description="Explore Afif Syahmi's research projects in Halal Science, Molecular Biology, and community engagement including HALALTIFY DNA Kit and GST Expression Research."
+                url="/projects"
+            />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl font-bold bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent mb-6">

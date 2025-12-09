@@ -1,11 +1,16 @@
 import { motion } from 'framer-motion';
 import GradientButton from '../components/GradientButton';
 import PageWrapper from '../components/PageWrapper';
+import SEO from '../components/SEO';
 import { Home, FlaskConical } from 'lucide-react';
 
 export default function NotFound() {
     return (
         <PageWrapper className="flex items-center justify-center min-h-[70vh]">
+            <SEO
+                title="Page Not Found"
+                description="The page you're looking for doesn't exist. Return to Afif Syahmi's portfolio."
+            />
             <div className="text-center px-4">
                 <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
