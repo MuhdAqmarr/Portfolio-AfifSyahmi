@@ -4,7 +4,7 @@ import PageWrapper from '../components/PageWrapper';
 import ProjectCard from '../components/ProjectCard';
 import SectionHeading from '../components/SectionHeading';
 import KeyStat from '../components/KeyStat';
-import { ArrowRight, Microscope, FlaskConical, Award, BookOpen, GraduationCap, Send, Dna } from 'lucide-react';
+import { ArrowRight, FlaskConical, Award, BookOpen, GraduationCap, Send, Dna } from 'lucide-react';
 
 const featuredProjects = [
     {
@@ -49,13 +49,13 @@ export default function Home() {
                                 Available for Hire
                             </div>
                             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6 leading-tight">
-                                Hi, I’m <br />
+                                Hi, I'm <br />
                                 <span className="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
                                     Afif Syahmi.
                                 </span>
                             </h1>
                             <p className="text-xl md:text-2xl text-slate-600 font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                                Applied Biology × Halal Science × Research & Innovation
+                                Applied Biology × Halal Science × Research &amp; Innovation
                             </p>
                             <p className="mt-6 text-slate-500 max-w-lg mx-auto lg:mx-0 leading-relaxed text-lg">
                                 First Class Honours graduate passionate about integrating biological sciences with ethical industry solutions to create impactful technologies.
@@ -71,7 +71,7 @@ export default function Home() {
                             <GradientButton to="/projects">
                                 View My Work <ArrowRight size={18} />
                             </GradientButton>
-                            <GradientButton to="/contact" className="!bg-none !bg-white !text-slate-700 !shadow-lg border-2 border-slate-100 hover:border-brand-blue hover:text-brand-blue">
+                            <GradientButton to="/contact">
                                 Contact Me
                             </GradientButton>
                         </motion.div>
@@ -79,15 +79,17 @@ export default function Home() {
 
                     {/* Floating Visuals */}
                     <div className="relative h-[500px] w-full hidden lg:flex items-center justify-center">
-                        {/* Central Image Placeholder */}
+                        {/* Central Image */}
                         <motion.div
-                            className="w-80 h-80 rounded-full bg-gradient-to-tr from-slate-100 to-white shadow-2xl relative z-10 flex items-center justify-center border-4 border-white overflow-hidden"
+                            className="w-80 h-96 rounded-3xl bg-gradient-to-tr from-slate-100 to-white shadow-2xl relative z-10 flex items-center justify-center border-4 border-white overflow-hidden"
                             animate={{ y: [0, -20, 0] }}
                             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                         >
-                            <div className="text-brand-blue opacity-20">
-                                <Microscope size={120} />
-                            </div>
+                            <img
+                                src="/hero-image.png"
+                                alt="Afif Syahmi"
+                                className="w-full h-full object-cover"
+                            />
                             <div className="absolute inset-0 bg-gradient-to-tr from-brand-blue/20 to-transparent mix-blend-overlay" />
                         </motion.div>
 
@@ -126,7 +128,7 @@ export default function Home() {
             </section>
 
             {/* --- STATS SECTION --- */}
-            <section className="py-12 bg-slate-50 border-y border-slate-200/60">
+            <section className="py-12 bg-white/50 backdrop-blur-sm border-y border-slate-200/60">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <KeyStat icon={GraduationCap} value="3.77" label="CGPA (First Class)" delay={0.1} />
@@ -153,7 +155,7 @@ export default function Home() {
                     </div>
 
                     <div className="mt-12 text-center">
-                        <GradientButton to="/projects" className="!bg-none !bg-white !text-slate-700 shadow-none border border-slate-200 hover:border-brand-blue hover:text-brand-blue">
+                        <GradientButton to="/projects">
                             View All Projects
                         </GradientButton>
                     </div>
@@ -161,7 +163,7 @@ export default function Home() {
             </section>
 
             {/* --- EXPERTISE GRID --- */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-white/60 backdrop-blur-md">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <SectionHeading
                         title="Core Competencies"
@@ -179,7 +181,7 @@ export default function Home() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.05 }}
-                                className="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-center font-medium text-slate-700 hover:bg-blue-50 hover:text-brand-blue hover:border-blue-100 transition-colors cursor-default"
+                                className="p-4 rounded-xl bg-white/80 border border-slate-100 flex items-center justify-center text-center font-medium text-slate-700 hover:bg-white hover:text-brand-blue hover:border-blue-100 hover:shadow-lg transition-all cursor-default"
                             >
                                 {skill}
                             </motion.div>
@@ -207,10 +209,10 @@ export default function Home() {
                                 I am currently open to opportunities in laboratory operations, halal science, and research roles. Let's discuss how I can contribute to your team.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <GradientButton to="/contact" className="!bg-none !bg-white !text-brand-blue !shadow-2xl hover:scale-105">
+                                <GradientButton to="/contact" className="!bg-none !bg-white/20 !backdrop-blur-sm border !border-white/30 !text-white hover:!bg-white/30 !shadow-2xl">
                                     Get In Touch <Send size={18} />
                                 </GradientButton>
-                                <GradientButton href="mailto:afifsyahmiuddin@gmail.com" className="!bg-none !bg-brand-blue !border-white !border-2 !text-white hover:bg-white hover:text-brand-blue">
+                                <GradientButton href="mailto:afifsyahmiuddin@gmail.com" className="!bg-none !bg-transparent !border-white !border-2 !text-white hover:!bg-white/10">
                                     Email Me Directly
                                 </GradientButton>
                             </div>

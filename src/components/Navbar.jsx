@@ -16,11 +16,18 @@ export default function Navbar() {
     const location = useLocation();
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
-                    <Link to="/" className="text-xl font-bold bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
-                        Afif Syahmi
+        <nav className="fixed top-4 left-4 right-4 md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-5xl z-50 bg-white/10 backdrop-blur-md border border-slate-200/50 shadow-md rounded-full transition-all duration-300">
+            <div className="px-6 sm:px-8">
+                <div className="flex justify-between items-center h-20">
+                    <Link to="/" className="flex items-center gap-4 group">
+                        <img
+                            src="/logo-removebg.png"
+                            alt="Logo"
+                            className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+                        />
+                        <span className="text-xl font-bold bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
+                            Afif Syahmi
+                        </span>
                     </Link>
 
                     {/* Desktop Menu */}
@@ -52,10 +59,10 @@ export default function Navbar() {
             {/* Mobile Menu */}
             {isOpen && (
                 <motion.div
-                    initial={{ opacity: 0, y: -20 }}
+                    initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className="md:hidden bg-white border-b border-slate-100"
+                    exit={{ opacity: 0, y: -10 }}
+                    className="absolute top-full left-0 right-0 mt-2 bg-white/90 backdrop-blur-md border border-slate-200 rounded-2xl shadow-xl overflow-hidden md:hidden"
                 >
                     <div className="px-4 pt-2 pb-4 space-y-1">
                         {navItems.map((item) => (
@@ -64,8 +71,8 @@ export default function Navbar() {
                                 to={item.path}
                                 onClick={() => setIsOpen(false)}
                                 className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname === item.path
-                                        ? 'text-brand-blue bg-blue-50'
-                                        : 'text-slate-600 hover:text-brand-blue hover:bg-slate-50'
+                                    ? 'text-brand-blue bg-blue-50'
+                                    : 'text-slate-600 hover:text-brand-blue hover:bg-slate-50'
                                     }`}
                             >
                                 {item.name}

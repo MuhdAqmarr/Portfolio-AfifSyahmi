@@ -75,7 +75,7 @@ export default function Resume() {
                         <span className="p-2 bg-indigo-50 rounded-lg text-indigo-500">🛠</span> Skills
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                        <div className="bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-sm border border-slate-100">
                             <h3 className="font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">Laboratory Skills</h3>
                             <div className="flex flex-wrap gap-2">
                                 {['Aseptic Techniques (Expert)', 'Cell Culture', 'Gram Staining', 'Conventional PCR', 'qPCR', 'Gel Electrophoresis', 'Spectrophotometer', 'Food Analysis'].map((skill) => (
@@ -83,7 +83,7 @@ export default function Resume() {
                                 ))}
                             </div>
                         </div>
-                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                        <div className="bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-sm border border-slate-100">
                             <h3 className="font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">Technical & Tools</h3>
                             <div className="flex flex-wrap gap-2">
                                 {['Canva (Expert)', 'Scientific Writing', 'Analytical Research', 'Microsoft Office', 'SPSS'].map((skill) => (

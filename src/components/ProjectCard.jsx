@@ -10,7 +10,7 @@ export default function ProjectCard({ title, category, description, items = [], 
 
             transition={{ delay: delay, duration: 0.5 }}
             whileHover={{ y: -10 }}
-            className="group relative bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 h-full flex flex-col"
+            className="group relative bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-slate-100 h-full flex flex-col"
         >
             <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-blue to-brand-cyan" />
 

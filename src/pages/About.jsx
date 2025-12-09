@@ -49,7 +49,7 @@ export default function About() {
                 {/* Fun Facts / Additional Interest Section */}
                 <div className="mt-20">
                     <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">Beyond The Lab</h2>
-                    <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 flex flex-wrap gap-4 justify-center">
+                    <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-sm border border-slate-100 flex flex-wrap gap-4 justify-center">
                         {['Track & Field Athlete', 'Public Science Engagement', 'Hand-drawn Biological Diagrams', 'Volunteerism', 'Leadership'].map((item, index) => (
                             <span key={index} className="px-6 py-3 bg-slate-50 text-slate-700 rounded-full text-sm font-medium hover:bg-brand-blue hover:text-white transition-colors duration-300 cursor-default">
                                 {item}

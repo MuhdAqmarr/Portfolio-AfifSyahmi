@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-export default function GradientButton({ to, href, children, className = "", ...props }) {
-    const baseClasses = "relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-0 rounded-full shadow-xl group";
+export default function GradientButton({ to, href, children, className = "", type, disabled, ...props }) {
+    const baseClasses = `relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-0 rounded-full shadow-xl group ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`;
     const bgClasses = "absolute inset-0 w-full h-full bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-blue bg-[length:200%_auto] animate-gradient";
 
     // Custom animation for the gradient background
@@ -20,6 +20,15 @@ export default function GradientButton({ to, href, children, className = "", ...
             <Link to={to} className={`${baseClasses} ${className}`} {...props}>
                 {content}
             </Link>
+        );
+    }
+
+    // If type is specified (e.g., "submit" or "button"), render a button element
+    if (type) {
+        return (
+            <button type={type} disabled={disabled} className={`${baseClasses} ${className}`} {...props}>
+                {content}
+            </button>
         );
     }
 
