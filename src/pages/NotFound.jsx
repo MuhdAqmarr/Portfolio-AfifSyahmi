@@ -6,7 +6,7 @@ import { Home, FlaskConical } from 'lucide-react';
 
 export default function NotFound() {
     return (
-        <PageWrapper className="flex items-center justify-center min-h-[50vh] -mt-10">
+        <PageWrapper className="flex items-center justify-center min-h-[60vh] -mt-2">
             <SEO
                 title="Page Not Found"
                 description="The page you're looking for doesn't exist. Return to Afif Syahmi's portfolio."
