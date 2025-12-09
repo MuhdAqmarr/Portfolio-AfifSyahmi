@@ -1,11 +1,11 @@
 # robots.txt for Afif Syahmi Portfolio
-# https://portfolio-afif-syahmi.vercel.app
+# https://afifsyahmiaminuddin.vercel.app
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://portfolio-afif-syahmi.vercel.app/sitemap.xml
+Sitemap: https://afifsyahmiaminuddin.vercel.app/sitemap.xml
 
 # Crawl delay (optional - helps with server load)
 Crawl-delay: 1

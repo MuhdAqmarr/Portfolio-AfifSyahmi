@@ -4,7 +4,7 @@ const defaultMeta = {
     title: 'Afif Syahmi',
     description: 'Portfolio of Afif Syahmi - First Class Honours graduate in Applied Biology with expertise in Halal Science, Molecular Biology, and Research Innovation. Available for hire.',
     image: '/og-image.jpeg',
-    url: 'https://portfolio-afif-syahmi.vercel.app'
+    url: 'https://afifsyahmiaminuddin.vercel.app'
 };
 
 export default function SEO({
