@@ -47,4 +47,4 @@ Then open your browser to `http://localhost:5173`.
 
 ---
 
-Created for Afif Syahmi by Antigravity.
+Created for Afif Syahmi.
